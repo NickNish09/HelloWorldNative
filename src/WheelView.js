@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import PropTypes from 'prop-types'
+import { styles } from './styles';
+import Slot from "./components/Slot";
 
 export default class WheelView extends Component {
   constructor(props) {
@@ -14,8 +15,12 @@ export default class WheelView extends Component {
   }
   render() {
     return (
-      <View>
-        <Text>Oi</Text>
+      <View style={styles.cardBackground}>
+        {this.props.data.map((data, index) => {
+          return(
+            <Slot key={index} name={data.name} url={data.url}/>
+          )
+        })}
       </View>
     );
   }

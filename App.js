@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Alert} from 'react-native';
 import ScratchView from 'react-native-scratch';
-import InfiniteScroll from './src/WheelView';
+import WheelView from './src/WheelView';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -56,15 +56,20 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Text style={styles.welcome}>Welcome to React Native!</Text>
-          <Text style={styles.instructions}>To get started, edit App.js</Text>
-          <Text style={styles.instructions}>{instructions}</Text>
-          <InfiniteScroll
-            data={[{ key: '1' }, { key: '2' }, { key: '3' }, { key: '4' }, { key: '5' }, { key: '6' }, { key: '7' }]}
-            renderItem={({ item }) => <View style={styles.listItem}><Text style={styles.text}>{item.key}</Text></View>}
-          />
-        </View>
+        <WheelView
+          data={[
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Larry' },
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Harry' },
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Varry' },
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Jerry' },
+          ]}
+        />
+        <WheelView
+          data={[
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Larry' },
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Harry' },
+          ]}
+        />
         {/*<ScratchView*/}
           {/*id={1} // ScratchView id (Optional)*/}
           {/*brushSize={32} // Default is 10% of the smallest dimension (width/height)*/}
