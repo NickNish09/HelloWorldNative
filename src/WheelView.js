@@ -16,11 +16,35 @@ export default class WheelView extends Component {
   render() {
     return (
       <View style={styles.cardBackground}>
-        {this.props.data.map((data, index) => {
-          return(
-            <Slot key={index} name={data.name} url={data.url}/>
-          )
-        })}
+        <View style={styles.cardRow}>
+          {this.props.data.map((data, index) => {
+            return(
+              <Slot key={index} name={data.name} url={data.url}/>
+            )
+          })}
+        </View>
+        <View style={styles.cardRow}>
+          {this.props.data.map((data, index) => {
+            return(
+              <Slot key={index} name={data.name} url={data.url}/>
+            )
+          })}
+        </View>
+        <View style={styles.cardRow}>
+          {this.props.data.map((data, index) => {
+            return(
+              <Slot key={index} name={data.name} url={data.url}/>
+            )
+          })}
+        </View>
+        <View style={styles.cardRow}>
+          {this.props.data.map((data, index) => {
+            return(
+              <Slot key={index} name={data.name} url={data.url}/>
+            )
+          })}
+        </View>
+
       </View>
     );
   }

@@ -68,6 +68,7 @@ export default class App extends Component<Props> {
           data={[
             { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Larry' },
             { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Harry' },
+            { url: 'https://facebook.github.io/react-native/docs/assets/favicon.png', name: 'Harry' },
           ]}
         />
         {/*<ScratchView*/}
