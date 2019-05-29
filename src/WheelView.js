@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 import Slot from "./components/Slot";
 
@@ -16,6 +16,9 @@ export default class WheelView extends Component {
   render() {
     return (
       <View style={styles.cardBackground}>
+        <TouchableOpacity style={styles.luckyButton}>
+          <Text>Rodar</Text>
+        </TouchableOpacity>
         <View style={styles.cardRow}>
           {this.props.data.map((data, index) => {
             return(

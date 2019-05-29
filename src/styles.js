@@ -13,24 +13,22 @@ export const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     flexDirection: 'column',
-    padding: 4,
     borderRadius: 5,
     backgroundColor: '#ff1320'
   },
   cardRow: {
     width: '100%',
-    marginBottom: 2,
     flexDirection: 'row',
-    height: '24.5%',
+    height: '25%',
   },
   slot: {
     flex: 1,
     borderRadius: 5,
     backgroundColor: '#001bff',
     padding: 10,
-    marginHorizontal: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 4
   },
   slotSelected: {
     backgroundColor: '#81d4ff',
@@ -38,5 +36,18 @@ export const styles = StyleSheet.create({
   slotImg: {
     height: 50,
     width: 50
+  },
+  luckyButton: {
+    height: '50%',
+    width: '50%',
+    position: 'absolute',
+    top: '25%',
+    bottom: '25%',
+    right: '25%',
+    left: '25%',
+    zIndex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
   }
 });
